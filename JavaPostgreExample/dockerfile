@@ -1,0 +1,5 @@
+FROM postgresql-9.3-1102.jdbc41.jar
+EXPOSE 3031 9098
+#VOLUME /JavaPostgreExample
+ADD lib/postgresql-9.3-1102.jdbc41.jar example.jar
+ENTRYPOINT [ "java", "-jar", "/example.jar" ]
